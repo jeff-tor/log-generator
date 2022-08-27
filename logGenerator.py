@@ -1,11 +1,7 @@
-app = Flask(__name)
-@app.route("/")
-import logging
-from msilib.schema import ServiceControl
-from readline import append_history_file
 import time
+import logging
+from readline import append_history_file
 from logging.handlers import TimedRotatingFileHandler
-from tkinter import image_names
 
 # DEBUG: Detailed information, typically of interest only when diagnosing problems.
 
