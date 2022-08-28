@@ -43,7 +43,7 @@ x = 0
 starttime = time.time()
 
 #this loop geenrates the reulsts every second
-while (x < 240):
+while (x < 10):
 
     add_result = add(num_1, num_2)
     logging.debug('Add: {} + {} = {}'.format(num_1, num_2, add_result))

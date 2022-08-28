@@ -1,3 +1,16 @@
+---
+apiVersion: vl
+kind: PersistentVolumeClaim
+metadata:
+  name: task-pv-claim
+spec:
+  storageClassName: manual
+  accessModes:
+    -ReadWriteOnce
+  resources:
+    requests:
+      storage: 3Gi
+---
 apiVersion: v1
 kind: Service
 metadata:
@@ -10,7 +23,6 @@ spec:
       port: 6000
       targetPort: 5000
   type: LoadBalancer
-
 ---
 apiVersion: apps/v1
 kind: Deployment
