@@ -14,7 +14,8 @@ from logging.handlers import TimedRotatingFileHandler
 # CRITICAL: A serious error, indicating that the program itself may be unable to continue running.
 
 logging.basicConfig(filename='test-calc.log', level=logging.DEBUG,
-                            format='%(asctime)s:%(msecs)03d,%(levelname)s:%(message)s',datefmt='%Y-%m-%d %H:%M:%S')
+                    format='%(asctime)s:%(levelname)s:%(message)s')
+logging.Formatter(fmt='%(asctime)s:%(msecs)03d:', datefmt='%Y-%m-%d,%H:%M:%S')
 
 
 ##we need to remove this and replace with a output code that reports computer health
